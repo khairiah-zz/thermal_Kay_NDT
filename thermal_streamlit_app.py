@@ -37,7 +37,7 @@ if uploaded_file:
 
     # detect corners with the goodFeaturesToTrack function.
     corners = cv2.goodFeaturesToTrack(gray, 150, 0.01, 50)
-    corners = np.int0(corners)
+    corners = corners.astype(int)
 
     # we iterate through each corner, 
     # making a circle at each point that we think is a corner.
